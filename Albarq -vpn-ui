@@ -1,0 +1,7 @@
+mkdir albarq-vpn
+cd albarq-vpn
+mkdir arq-vpn-ui barq-vpn docs
+touch README.md CONTRIBUTING.md status.md modules.md docs/policies-and-governance.md
+git init
+git add .
+git commit -m "تهيئة هيكل مشروع البرق VPN ⚡"
