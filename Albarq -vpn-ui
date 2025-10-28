@@ -4,4 +4,167 @@ mkdir arq-vpn-ui barq-vpn docs
 touch README.md CONTRIBUTING.md status.md modules.md docs/policies-and-governance.md
 git init
 git add .
-git commit -m "تهيئة هيكل مشروع البرق VPN ⚡"
+git commit -m "تهيئة هيكل مشروع البرق VPN "
+mkdir Albarq-VPN
+cd Albarq-VPN
+mkdir ARQ-VPN-UI Barq-VPN Docs
+touch README.md CONTRIBUTING.md status.md modules.md
+touch Docs/policies-and-governance.md
+git init
+git add .
+git commit -m "تهيئة مشروع البرق VPN "
+mkdir Albarq-VPN
+cd Albarq-VPN
+mkdir ARQ-VPN-UI Barq-VPN Docs
+touch README.md CONTRIBUTING.md status.md modules.md
+touch Docs/policies-and-governance.md
+git init
+git add .
+git commit -m "تهيئة مشروع البرق VPN"
+mkdir Albarq-VPN
+cd Albarq-VPN
+mkdir ARQ-VPN-UI Barq-VPN Docs
+touch README.md CONTRIBUTING.md status.md modules.md
+touch Docs/policies-and-governance.md
+git init
+git add .
+git commit -m "تهيئة المشروع وتحديد intent التأسيس"
+mkdir Albarq-VPN
+cd Albarq-VPN
+mkdir ARQ-VPN-UI Barq-VPN Docs
+touch README.md CONTRIBUTING.md status.md modules.md
+touch Docs/policies-and-governance.md
+git init
+git add .
+git commit -m "Initialize repository with core structure and documentation"
+Albarq-VPN Project
+This repository contains the modular components for a VPN system with a dedicated UI and backend service.
+Directory Structure
+- ARQ-VPN-UI: Frontend interface (React/Vue-based)
+- Barq-VPN: Core VPN backend (Node.js or Python)
+- Docs/: Governance, policies, and technical documentation
+Setup Instructions
+`bash
+npm install
+npm run dev
+Objectives
+- Provide a modular VPN architecture
+- Ensure maintainability and scalability
+- Document all components for contributor onboarding
+markdown
+
+Contribution Guidelines
+
+Workflow
+
+1. Fork the repository
+2. Create a feature branch: git checkout -b feature-name
+3. Commit changes with descriptive messages
+4. Submit a pull request with context and rationale
+
+Code Standards
+
+- Use ESLint for JS/TS code
+- Follow PEP8 for Python modules
+- All commits must pass CI checks
+
+Documentation
+
+- Update modules.md for any new components
+- Log changes in status.md
+Changelog
+
+All notable changes to this project will be documented in this file.
+
+This project adheres to Semantic Versioning.
+
+[Unreleased]
+- Initialized core structure: ARQ-VPN-UI, Barq-VPN, Docs
+- Created documentation files: README.md, CONTRIBUTING.md, status.md, modules.md
+- Defined initial commit intent and repository configuration
+
+[0.1.0] - 2025-10-28
+
+Added
+- Project directories and file scaffolding
+- Initial commit with technical structure
+- Setup instructions in README.md
+- Contribution workflow in CONTRIBUTING.md
+
+Planned
+- UI integration with VPN backend
+- Modular configuration for VPN protocols
+- CI/CD pipeline setup
+npm install -g conventional-changelog-cli
+conventional-changelog -p angular -i status.md -s
+conventional-changelog -p angular -i status.md -s -r 0
+!/bin/bash
+
+اسم الملف الناتج
+CHANGELOG_FILE="status.md"
+
+بداية الملف
+echo "# Changelog" > $CHANGELOG_FILE
+echo "" >> $CHANGELOG_FILE
+echo "Generated from raw Git history." >> $CHANGELOG_FILE
+echo "" >> $CHANGELOG_FILE
+
+استخراج التغييرات مجمعة حسب التاريخ
+git log --date=short --pretty=format:'%ad|%h|%s' | sort | uniq | while IFS='|' read -r date hash message
+do
+    echo "## [$date]" >> $CHANGELOG_FILE
+    echo "- [$hash] $message" >> $CHANGELOG_FILE
+    echo "" >> $CHANGELOG_FILE
+done
+
+ختم التوليد
+echo "---" >> $CHANGELOG_FILE
+echo "Generated on: $(date '+%Y-%m-%d %H:%M:%S')" >> $CHANGELOG_FILE
+cat > generate-changelog.sh << 'EOF'
+
+!/bin/bash
+
+CHANGELOG_FILE="status.md"
+
+echo "# Changelog" > $CHANGELOG_FILE
+echo "" >> $CHANGELOG_FILE
+echo "Generated from raw Git history." >> $CHANGELOG_FILE
+echo "" >> $CHANGELOG_FILE
+
+git log --date=short --pretty=format:'%ad|%h|%s' | sort | uniq | while IFS='|' read -r date hash message
+do
+    echo "## [$date]" >> $CHANGELOG_FILE
+    echo "- [$hash] $message" >> $CHANGELOG_FILE
+    echo "" >> $CHANGELOG_FILE
+cat status.md
+less status.md
+
+
+echo "---" >> $CHANGELOG_FILE
+echo "Generated on: $(date '+%Y-%m-%d %H:%M:%S')" >> $CHANGELOG_FILE
+EOF
+chmod +x generate-changelog.sh
+./generate-changelog.sh
+cp generate-changelog.sh .git/hooks/post-commit
+chmod +x .git/hooks/post-commit
+git add .
+git commit -m "تعديل تجريبي"
+cat status.md
+less status.md
+git diff status.md
+git log --follow status.md
+code status.md
+cat status.md
+git log v1.0.0..HEAD --oneline
+log v1.0.0..HEAD --pretty=format:'- [%h] %s (%ad)' --date=short
+cat status.md
+git diff status.md
+git log --follow status.md
+tail status.md
+tail -n 20 status.md
+echo "آخر تحديث: $(date '+%Y-%m-%d %H:%M:%S')" >> $CHANGELOG_FILE
+Generated on: 2025-10-28 03:41:00  
+آخر تحديث: 2025-10-28 03:41:00
+echo "آخر تحديث محفوظ في هذا السجل، كأثر تقني لا يُمحى." >> $CHANGELOG_FILE
+echo "آخر تعديل تم تسجيله في: $(date '+%Y-%m-%d %H:%M:%S')" >> $CHANGELOG_FILE
+
